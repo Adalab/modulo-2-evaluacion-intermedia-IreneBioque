@@ -9,19 +9,15 @@ const trys = document.querySelector('.js_paragraph2');
  return Math.ceil(Math.random() * max);
  }
     
-// function getRandomNumber() {
-//     const randomNumber = Math.round(Math.random() * 100);
-//     return randomNumber;
-// };
 
-console.log(getRandomNumber(100));
+const randomNumber = getRandomNumber(100);
+console.log(randomNumber);
 
 function number() {
-    const randomNumber = getRandomNumber(100);
     const numeroIntroducido = input.value;
     //debugger;
 if (numeroIntroducido < 0) {
-    clue.innerHTML+= ' El número debe estar entre 1 y 100.'
+    clue.innerHTML= ' El número debe estar entre 1 y 100.'
 } else if (numeroIntroducido > randomNumber && numeroIntroducido < 100) {
     clue.innerHTML+= ' Demasiado alto.' 
 } else if (numeroIntroducido < randomNumber) {
@@ -34,10 +30,11 @@ if (numeroIntroducido < 0) {
 }
 };
 
-
 function handleButton() {
     number();
     
 };
-
+button.addEventListener('click', function clickedButton() {
+    trys.innerHTML += 1;
+});
 button.addEventListener('click', handleButton);
