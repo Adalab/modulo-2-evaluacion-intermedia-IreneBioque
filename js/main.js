@@ -29,12 +29,14 @@ if (numeroIntroducido < 0) {
     clue.innerHTML+= ' Has ganado campeona!!!'
 }
 };
-
+function clickedButton() {
+    trys.innerHTML += 1;
+}
 function handleButton() {
     number();
-    
+    clickedButton();
 };
-button.addEventListener('click', function clickedButton() {
-    trys.innerHTML += 1;
-});
+
+
+
 button.addEventListener('click', handleButton);
