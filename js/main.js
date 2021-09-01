@@ -30,7 +30,8 @@ if (numeroIntroducido < 0) {
 }
 };
 function clickedButton() {
-    trys.innerHTML += 1;
+    const number = 0;
+    trys.innerHTML += number;
 }
 function handleButton() {
     number();
