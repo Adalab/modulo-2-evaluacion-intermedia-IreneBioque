@@ -14,7 +14,7 @@ let counter = 0;
     
 
 const randomNumber = getRandomNumber(100);
-console.log(randomNumber);
+
 
 
 function number() {
