@@ -31,18 +31,22 @@ function number() {
     } else if (numberInserted > 100) {
        clue.innerHTML = 'Pista: El número debe estar entre 1 y 100.'
     } else {
-      clue.innerHTML = '¡¡¡ Has ganado campeona!!!'
+        winner();
     }
     return numberInserted;
 };
 
+function winner(){
+    return clue.innerHTML = '¡¡¡ Has ganado campeona!!!'
+};
+
 function clickedButton() {
     trys.innerHTML = `Número de intentos: ${counter}`;
-}
+};
 function updateCounter() {
     counter = counter + 1;
     clickedButton();
-}
+};
 function handleButton(ev) {
     ev.preventDefault();
     number();
